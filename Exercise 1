@@ -1,0 +1,9 @@
+# make a directory
+>>> import os 
+>>> os.mkdir('/Users/hyanlin/Desktop/"test"')
+>>> os.getcwd()
+'/Users/hyanlin'
+>>> os.chdir('/Users/hyanlin/Desktop/"test"')
+>>> os.listdir('/Users/hyanlin/Desktop/"test"')
+['untitled.txt']
+>>> quit()
