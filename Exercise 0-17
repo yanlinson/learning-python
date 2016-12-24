@@ -1,0 +1,61 @@
+# make a directory
+>>> import os 
+>>> os.mkdir('/Users/hyanlin/Desktop/"test"')
+>>> os.getcwd()
+'/Users/hyanlin'
+>>> os.chdir('/Users/hyanlin/Desktop/"test"')
+>>> os.listdir('/Users/hyanlin/Desktop/"test"')
+['untitled.txt']
+>>> quit()
+
+# run a python file
+God-is-good:~ hyanlin$ cd Desktop
+God-is-good:Desktop hyanlin$ python ex1.py
+Hello World!
+Hello Again
+I like typing this.
+This is fun.
+Yay! Printing.
+I'd much rather you 'not'.
+I "said" do not touch this.
+
+# the use of "#"
+
+# A comment, this is so you can read your program later.
+# Anything after the # is ignored by python.
+print "I could have code like this." # and the comment after is ignored
+# You can also use a comment to "disable" or comment out a piece of code:
+# print "This won't run."
+print "This will run."
+
+God-is-good:~ hyanlin$ cd desktop
+God-is-good:desktop hyanlin$ python ex2.py
+I could have code like this.
+This will run.
+
+# Numbers and Math
+
+# -*- coding: utf-8 -*-
+# 整数转换浮点数
+print "I will now count my chickens:"
+a= 25+30/6
+b=float(a)
+print "Hens", b  
+
+a= 100 - 25/(3+4)
+b= float(a)
+print b, "Roosters"
+
+# 运算优先级 
+print "Now I will count the eggs:"
+print "Is it true that 100 - 25/3+4 < 100 - 25/(3+4)?"
+print 100 - 25/3+4 < 100 - 25/(3+4)
+
+print "What is 100 - 25/3+4 ?", 100 - 25/3+4 
+print "What is 100 - 25/(3+4)", 100 - 25/(3+4)
+print "Oh, that's why it's False."
+print "How about some more."
+print "Is it greater?", 25/3+4  > 25/(3+4)
+print "Is it greater or equal?", 25/3+4 >= 25/(3+4)
+print "Is it less or equal?", 25/3+4 <= 25/(3+4)
+
