@@ -7,7 +7,7 @@
 >>> os.listdir('/Users/hyanlin/Desktop/"test"')
 ['untitled.txt']
 
-# run a python file
+# 运行python 程序
 God-is-good:~ hyanlin$ cd Desktop
 God-is-good:Desktop hyanlin$ python ex1.py
 Hello World!
@@ -18,12 +18,12 @@ Yay! Printing.
 I'd much rather you 'not'.
 I "said" do not touch this.
 
-# the use of "#"
+#  "#" 的用法
 
-# A comment, this is so you can read your program later.
+#A comment, this is so you can read your program later.
 # Anything after the # is ignored by python.
 print "I could have code like this." # and the comment after is ignored
-# You can also use a comment to "disable" or comment out a piece of code:
+#You can also use a comment to "disable" or comment out a piece of code:
 # print "This won't run."
 print "This will run."
 
@@ -73,4 +73,246 @@ Is it greater? True
 Is it greater or equal? True
 Is it less or equal? False
 
-# Variables 
+# Variables and Names
+
+cars = 100space_in_a_car = 4.0drivers = 30passengers = 90cars_not_driven = cars - driverscars_driven = driverscarpool_capacity = cars_driven * space_in_a_caraverage_passengers_per_car = passengers / cars_drivenprint "There are", cars, "cars available."print "There are only", drivers, "drivers available."print "There will be", cars_not_driven, "empty cars today."print "We can transport", carpool_capacity, "people today."print "We have", passengers, "to carpool today."print "We need to put about", average_passengers_per_car, "in each car."
+
+God-is-good:desktop hyanlin$ python ex5.py
+There are 100 cars available.
+There are only 30 drivers available.
+There will be 70 empty cars today.
+We can transport 120.0 people today.
+We have 90 to carpool today.
+We need to put about 3 in each car.
+
+## Extra credits 
+- 每一个名字必须定义, 否则会出现语法错误。
+- 4.0与4的区别是浮点数与整数的区别
+
+>>> i=10
+>>> x=9
+>>> j=100
+>>> a= i*x
+>>> b= i/j-j*x
+>>> print "The result is", a/b 
+
+# More Variables 
+
+my_name = 'Franklin'
+my_age = 20 # not a lie
+my_height = 74 # inches
+my_height_centimeter= my_height * 2.54 # centimeters
+my_weight = 180 # lbs
+my_weight_kg= my_weight * 0.45359237 # kilograms
+my_eyes = 'brown'
+my_teeth = 'white'
+my_hair = 'black'
+
+print "Let's talk about %s." % my_name
+print "He's %s inches tall, equaling to %s centimeters." % (my_height, my_height_centimeter)
+print "He's %s pounds heavy, equivalent to %s kilograms." % (my_weight, my_weight_kg)
+print "Actually that's not too heavy."
+print "He's got %s eyes and %s hair." % (my_eyes, my_hair)
+print "His teeth are usually %s depending on the coffee." % my_teeth
+
+print "If I add %s, %s, and %s I get %s." % (
+my_age, my_height, my_weight, my_age + my_height + my_weight)
+
+# Strings and Text
+x = "I have %s billion dollars." % 10
+me = "me"
+do_not = "don't"
+y = "those who know %s and those who %s are not lucky enough." % (me, do_not)
+
+print x
+print y
+print "I said, %s." % x
+print "I also said, '%s'" % y
+hilarious = True
+joke_evaluation = "Isn't the joke so funny?! %r"
+print joke_evaluation % hilarious
+w = "You are the most beautiful girl "
+e = "I have ever seen."
+print w + e
+
+## 笔记
+%r 用于debug 
+%s 用于指代string
+%d 用于指代number 
+
+# More Printing
+
+# -*- coding: utf-8 -*-
+print "I have a dream "
+print "that one day this nation will rise up and live out the %s meaning of its creed: " % 'true'
+print "We hold these truths to be self-evident, that all men are created equal."
+print "." * 20 # The number of strings
+end1 = "C"
+end2 = "h"
+end3 = "e"
+end4 = "e"
+end5 = "s"
+end6 = "e"
+end7 = "B"
+end8 = "u"
+end9 = "r"
+end10 = "g"
+end11 = "e"
+end12 = "r"
+
+print end1 + end2 + end3 + end4 + end5 + end6, # The "," means a space.
+print end7 + end8 + end9 + end10 + end11 + end12 
+
+# Printing, Printing 
+# -*- coding: utf-8 -*-
+formatter = "%s %s %s %s"
+
+print formatter % (1, 2, 3, 4)
+print formatter % ("一", "二", "三", "四")
+print formatter % (True, False, False, True)
+print formatter % (formatter, formatter, formatter, formatter)
+print formatter % ("你问我", "爱你", "有多深", "我爱你有几分？")
+
+# Printing, Printing, Printing
+
+# -*- coding: utf-8 -*-
+days = "周一,周二,周三,周四,周五,周六,周日"
+months = "一月,二月,三月,四月\n五月\n六月\n七月\n八月\n九月,十月,十一月,十二月"
+print "Here are the days: ", days
+print "Here are the months: ", months
+print """
+以上是中文的日月表达, 祝你学习愉快。
+谢谢你！
+"""
+
+# What Was That?
+
+# -*- coding: utf-8 -*-
+tabby_cat = "\a 你好"
+persian_cat = "我是波斯\n猫"
+backslash_cat = "你是 \\ 大猫 \\ 吗?"
+fat_cat = """
+I'll do a list:
+\n* Cat food \n* Fishies
+\t* Catnip\n* Grass
+\'abc
+\"cba
+\r abc
+\n abc 
+\b abc 
+\a abc
+\r abc 
+\t abc 
+\v abc
+\uxxx abc
+\N {Franklin} Franklin
+
+
+"""
+print tabby_cat
+print persian_cat
+print backslash_cat
+print fat_cat
+
+while True:
+        for i in ["/","-","|","\\","|"]:
+                print "%s\r" % i,                
+## 笔记
+- 这个while 功能挺有趣, \后面加不同字母的功能有待未来使用中继续探索。
+
+- 中间可以放要print的内容, 方便简洁
+“”“
+
+”“” 
+
+# Ask Questions
+
+# -*- coding: utf-8 -*-
+print "你的名字?",
+name = raw_input()
+print "你从哪来?",
+origin = raw_input()
+print "要到哪里去?",
+destination = raw_input()
+print "所以, 你叫 %s, 从 %s 来, 要到 %s 去." % (name, origin, destination)
+
+# Prompting People
+
+# -*- coding: utf-8 -*-
+name = raw_input("你的名字?")
+origin = raw_input("你从哪里来?")
+destination = raw_input("要到哪里去?")
+print "所以, 你叫 %s, 从 %s 来, 要到 %s 去." % (name, origin, destination)
+
+# Parameters, Unpacking, Variables
+
+God-is-good:desktop hyanlin$ python ex3.py script, first, second,third
+The script is called: ex3.py
+Your first variable is: script,
+Your second variable is: first,
+Your third variable is: second,third
+
+
+
+# Prompting And Passing
+
+
+from sys import argv
+start, fill = argv
+prompt = '> '
+print "Hi %s, I'm the %s assistant." % ("there", "wonderful")
+print "I'd like to ask you a few questions."
+print "Do you like your %s?" % "assistant"
+likes = raw_input(prompt)
+print "Where does your %s live?" % "assistant"
+location = raw_input(prompt)
+print "What kind of computer do you have?"
+computer = raw_input(prompt)
+print """
+Alright, so you said %r about liking your assistant.
+You live in %r. Not sure where that is.
+And you have a %r computer. Nice.
+""" % (likes, location, computer)
+
+# Reading Files
+
+from sys import argv
+script, filename = argv
+txt = open(filename)
+print "Here's your file %r:" % filename
+print txt.read()
+print "Type the filename again:"
+file_again = raw_input("> ")
+txt_again = open(file_again)
+print txt_again.read()
+
+# 笔记 
+这个函数有点点不太明白
+
+# Reading and writing files 
+
+from sys import argv
+script, filename = argv
+print "We're going to erase %r." % filename
+print "If you don't want that, hit CTRL-C (^C)."
+print "If you do want that, hit RETURN."
+raw_input("?")
+print "Opening the file..."
+target = open(filename, 'w')
+print "Truncating the file. Goodbye!"
+target.truncate()
+print "Now I'm going to ask you for three lines."
+line1 = raw_input("line 1: ")
+line2 = raw_input("line 2: ")
+line3 = raw_input("line 3: ")
+print "I'm going to write these to the file."
+target.write(line1)
+target.write("\n")
+target.write(line2)
+target.write("\n")
+target.write(line3)
+target.write("\n")
+
+# More files 
+
+from sys import argvfrom os.path import existsscript, from_file, to_file = argvprint "Copying from %s to %s" % (from_file, to_file)# we could do these two on one line too, how?in_file = open(from_file)indata = in_file.read()print "The input file is %d bytes long" % len(indata)print "Does the output file exist? %r" % exists(to_file)print "Ready, hit RETURN to continue, CTRL-C to abort."raw_input()out_file = open(to_file, 'w')out_file.write(indata)print "Alright, all done."out_file.close()in_file.close()
